@@ -41,7 +41,7 @@ const Forms = () => {
   });
   return (
     <form onSubmit={formik.handleSubmit}>
-      <label htmlFor="prenom">First Name</label>
+      <label htmlFor="prenom">Prénom</label>
       <input
         id="prenom"
         name="prenom"
@@ -51,7 +51,7 @@ const Forms = () => {
       />
       {formik.errors.prenom ? <div className='alert_1'>{formik.errors.prenom}</div> : null}
 
-      <label htmlFor="nom">Last Name</label>
+      <label htmlFor="nom">Nom</label>
       <input
         id="nom"
         name="nom"
@@ -61,7 +61,7 @@ const Forms = () => {
       />
       {formik.errors.nom ? <div className='alert_1'>{formik.errors.nom}</div> : null}
 
-      <label htmlFor="email">Email Address</label>
+      <label htmlFor="email">Adresse Email </label>
       <input
         id="email"
         name="email"
@@ -71,7 +71,7 @@ const Forms = () => {
       />
       {formik.errors.email ? <div className='alert_1'>{formik.errors.email}</div> : null}
 
-      <button type="submit" className='button_submit'>Submit</button>
+      <button type="submit" className='button_submit'>Envoyer</button>
     </form>
   );
 };
