@@ -13,7 +13,7 @@ $font-fun : 'Fira Sans Extra Condensed', sans-serif;
 //Base color
 
 $color-black: #000000
-$color-gray: #d69f60
+$color-gray: #8a8580
 $color-red: #e01212
 $color-white: #ffffff
 $color-gold: #c98d1d
@@ -22,7 +22,6 @@ $color-gold: #c98d1d
 *
     margin: 0
     padding: 0
-    outline: 1px solid #ff0000
     
 a
     text-decoration: none
@@ -39,8 +38,7 @@ article,p,form
     font-family: $font-text
 
 video
-    width: 100%
-    height: 100%
+    width: 100vw
     overflow: visible
     background-position: center
     background-size: cover
@@ -65,10 +63,6 @@ input
     border: 1px solid $color-white
     border-radius: 3px
 
-
-
-
-
 // NABVAR
 
 nav
@@ -81,6 +75,7 @@ nav
     z-index: 1
     display: flex
     justify-content: center
+    background-color: $color-black
 
 ul
     margin: 0
@@ -127,26 +122,24 @@ p
 
 
 .main
-    width: 100%
-    height: 100%
+    height: 100vh
     overflow: hidden
 
 .button-box
   position: absolute
   width: 100%
+  height: 100%
   top: 10% 
 
 .pos_1
+    height: 40%
     color: $color-white
-    width: 100%
-    margin: 5em 0
-    text-align: center
+    padding: 3em 0 2em 2em
     text-shadow: -2px 0 $color-black, 0 2px $color-black, 2px 0 $color-black, 0 -2px $color-black
-    font-size: 2.5em  
+    font-size: 3.5em  
 
 .button-1
-  width: 100%
-  height: 25vh
+  height: 10%
   display: flex
   justify-content: center
   
@@ -189,15 +182,34 @@ p
 
 // HOME TODOList
 
+.todo__titre
+    text-align: center
+    font-size: 3em
+    margin: 1em
+
 .to-do-list
-    height: 100%
+    position: relative
     width: 100%
-    overflow: hidden
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: $color-gray
 
 .todo__list_alignement
     display: flex
     flex-direction: row
-    margin: 1
+    margin: 1em
+
+.todo__list_text
+    font-size: 1.5em
+//PAGINATION TODOList
+
+.pos_page 
+    text-align: center
+.page
+    text-align: center
+    font-size: 2em
+
 // Contact
 
 .box-form

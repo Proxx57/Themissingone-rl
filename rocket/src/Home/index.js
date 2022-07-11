@@ -2,13 +2,14 @@ import React from 'react';
 import videoBg from "../assets/Image/Videobg/videobg.mp4";
 import { Link } from "react-router-dom";
 import TodoList from '../components/importtodo';
+import Imgback from '../assets/Image/Background/background-2.webp'
 
 
 const Home = () => {
     return(
         <>
         <section className='main'>
-            <video src={videoBg} autoPlay loop muted/>
+            <video src={videoBg} autoPlay loop muted playsinline/>
             <article className="button-box">
                 <h1 className="pos_1">BIENVENUE, CHERS ROCKETEURS !  LA SAISON 7 COMMENCE . . .</h1>
                 <p className='button-1'>

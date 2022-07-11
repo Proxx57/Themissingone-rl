@@ -15,14 +15,15 @@ function Posts() {
 
   return (
     <section className="todo__">
-        <h2>Selectionné vos réalisation</h2>
+        <h2 className="todo__titre">Selectionner vos réalisations</h2>
       <section className="todo__list">
         {posts.slice(offset, offset + limit).map(({ id, title, completed }) => (
           <article className="todo__list_alignement" key={id}>
+                        <input className="todo__list_checkbox" type="checkbox" name={completed}></input>
             <h3 className="todo__list_text">
               {id}. {title}
             </h3>
-            <input className="todo__list_checkbox" type="checkbox" name={completed}></input>
+
           </article>
         ))}
       </section>

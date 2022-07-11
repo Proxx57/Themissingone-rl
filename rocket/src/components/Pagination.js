@@ -3,14 +3,14 @@ function Pagination({ total, limit, page, setPage }) {
   
     return (
       <>
-        <section>
-          <button onClick={() => setPage(page - 1)} disabled={page === 1}>
+        <section className="pos_page">
+          <button className="page" onClick={() => setPage(page - 1)} disabled={page === 1}>
             &lt;
           </button>
           {Array(numPages)
             .fill()
             .map((_, i) => (
-              <button
+              <button className="page"
                 key={i + 1}
                 onClick={() => setPage(i + 1)}
                 aria-current={page === i + 1 ? "page" : null}
@@ -18,7 +18,7 @@ function Pagination({ total, limit, page, setPage }) {
                 {i + 1}
               </button>
             ))}
-          <button onClick={() => setPage(page + 1)} disabled={page === numPages}>
+          <button className="page" onClick={() => setPage(page + 1)} disabled={page === numPages}>
             &gt;
           </button>
         </section>
