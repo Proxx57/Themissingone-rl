@@ -1,8 +1,6 @@
 import React from 'react';
-import { FormikConsumer, useFormik } from 'formik';
+import { useFormik } from 'formik';
 
-// A custom validation function. This must return an object
-// which keys are symmetrical to our values/initialValues
 const validate = values => {
   const errors = {};
   if (!values.prenom) {
