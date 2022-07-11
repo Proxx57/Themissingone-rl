@@ -22,7 +22,7 @@ $color-gold: #c98d1d
 *
     margin: 0
     padding: 0
-    outline: 1px solid #fff
+    outline: 1px solid #ff0000
     
 a
     text-decoration: none
@@ -39,8 +39,8 @@ article,p,form
     font-family: $font-text
 
 video
-    min-width: 100%
-    min-height: 100%
+    width: 100%
+    height: 100%
     overflow: visible
     background-position: center
     background-size: cover
@@ -64,6 +64,8 @@ input
     width: 200px
     border: 1px solid $color-white
     border-radius: 3px
+
+
 
 
 
@@ -125,27 +127,25 @@ p
 
 
 .main
-    width: 100vw
-    height: 100vh
+    width: 100%
+    height: 100%
     overflow: hidden
 
 .button-box
   position: absolute
-  width: 100vw
-  top: 10%
+  width: 100%
+  top: 10% 
 
 .pos_1
-  display: flex
-  align-items: center
-  padding: 1em
-  color: $color-white
-  height: 50vh
-  mIN-width: 50%
-  text-shadow: -2px 0 $color-black, 0 2px $color-black, 2px 0 $color-black, 0 -2px $color-black
-  font-size: 2.5em  
+    color: $color-white
+    width: 100%
+    margin: 5em 0
+    text-align: center
+    text-shadow: -2px 0 $color-black, 0 2px $color-black, 2px 0 $color-black, 0 -2px $color-black
+    font-size: 2.5em  
 
 .button-1
-  width: 100vw
+  width: 100%
   height: 25vh
   display: flex
   justify-content: center
@@ -191,6 +191,8 @@ p
 
 .to-do-list
     height: 100%
+    width: 100%
+    overflow: hidden
 
 .todo__list_alignement
     display: flex
@@ -203,7 +205,7 @@ p
   top: 0%
   display: flex
   flex-direction: row
-  width: 100vw
+  width: 100%
   height: 100%
   color: $color-white
 

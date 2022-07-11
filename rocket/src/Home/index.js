@@ -17,7 +17,6 @@ const Home = () => {
             </article>
         </section>
         <section className='to-do-list'>
-            <h2>Selectionné vos réalisation</h2>
             <TodoList/>
         </section>
         </>
