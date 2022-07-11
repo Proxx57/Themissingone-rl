@@ -7,7 +7,7 @@ import Imgback from '../assets/Image/Background/background-2.webp'
 
 const Home = () => {
     return(
-        <>
+        <main>
         <section className='main'>
             <video src={videoBg} autoPlay loop muted playsinline/>
             <article className="button-box">
@@ -20,7 +20,7 @@ const Home = () => {
         <section className='to-do-list'>
             <TodoList/>
         </section>
-        </>
+        </main>
 
     );
 }

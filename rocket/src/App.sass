@@ -22,6 +22,7 @@ $color-gold: #c98d1d
 *
     margin: 0
     padding: 0
+    outline: 1px solid $color-red
     
 a
     text-decoration: none
@@ -38,7 +39,7 @@ article,p,form
     font-family: $font-text
 
 video
-    width: 100vw
+    height: 100vh
     overflow: visible
     background-position: center
     background-size: cover
@@ -55,13 +56,7 @@ label
     font-family: $font-fun
     font-size: 2em
 
-input
-    background-color: rgba(255, 255, 255, 0.541)
-    color: $color-white
-    height: 20px
-    width: 200px
-    border: 1px solid $color-white
-    border-radius: 3px
+
 
 // NABVAR
 
@@ -122,26 +117,35 @@ p
 
 
 .main
+    position: relative
     height: 100vh
     overflow: hidden
 
+@media screen and (min-width:1440px)
+    video
+        height: auto
+        width: 100vw
+
+
 .button-box
   position: absolute
-  width: 100%
-  height: 100%
-  top: 10% 
+  width: 100vw
+  height: 100vh
+  top: 15vh
 
 .pos_1
-    height: 40%
+    margin-bottom: 1%
+    height: 30vh
     color: $color-white
-    padding: 3em 0 2em 2em
+    padding: 3% 0 2% 2%
     text-shadow: -2px 0 $color-black, 0 2px $color-black, 2px 0 $color-black, 0 -2px $color-black
-    font-size: 3.5em  
+    font-size: 4vh 
 
 .button-1
-  height: 10%
-  display: flex
-  justify-content: center
+    height: 30vh
+    position: relative
+    display: flex
+    justify-content: center
   
 .button-24
   margin: auto
@@ -202,6 +206,15 @@ p
 
 .todo__list_text
     font-size: 1.5em
+
+//CHECKBOX TODOList
+.checkbox
+    background-color: rgba(255, 255, 255, 0.541)
+    color: $color-white
+    height: 20px
+    width: 200px
+    border: 1px solid $color-white
+    border-radius: 3px
 //PAGINATION TODOList
 
 .pos_page 
