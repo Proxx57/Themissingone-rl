@@ -40,7 +40,7 @@ const Forms = () => {
   return (
     <form onSubmit={formik.handleSubmit}>
       <label htmlFor="prenom">Prénom</label>
-      <input
+      <input className='input_form'
         id="prenom"
         name="prenom"
         type="text"
@@ -50,7 +50,7 @@ const Forms = () => {
       {formik.errors.prenom ? <div className='alert_1'>{formik.errors.prenom}</div> : null}
 
       <label htmlFor="nom">Nom</label>
-      <input
+      <input className='input_form'
         id="nom"
         name="nom"
         type="text"
@@ -60,7 +60,7 @@ const Forms = () => {
       {formik.errors.nom ? <div className='alert_1'>{formik.errors.nom}</div> : null}
 
       <label htmlFor="email">Adresse Email </label>
-      <input
+      <input className='input_form'
         id="email"
         name="email"
         type="email"
