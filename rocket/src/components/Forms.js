@@ -1,77 +1,37 @@
-import React from 'react';
-import { useFormik } from 'formik';
+import React, {useState} from "react";
 
-const validate = values => {
-  const errors = {};
-  if (!values.prenom) {
-    errors.prenom = 'Merci de remplir le champ !';
-  } else if (values.prenom.length > 15) {
-    errors.prenom = 'Ce champs doit contenir moins de 15 caractères';
+export default function Form(){
+
+  const[input,setInput] = useState({
+    nom: "",
+    prenom: "",
+    email: ""
+
+  })
+
+  function handleChange(event){
+    const {name, value} = event.target
+    setInput(prevInput =>{
+      return {
+        ...prevInput,
+        [name]: value
+      }
+    })
   }
 
-  if (!values.nom) {
-    errors.nom = 'Merci de remplir le champ !';
-  } else if (values.nom.length > 20) {
-    errors.nom = 'Ce champs doit contenir moins de 20 caractères';
+  function handleClick(event){
+    event.preventDefault();
+    console.log(input)
   }
-
-  if (!values.email) {
-    errors.email = 'Merci de remplir le champ !';
-  } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-    errors.email = 'Adresse mail invalide';
-  }
-
-  return errors;
-};
-
-const Forms = () => {
-
-  const formik = useFormik({
-    initialValues: {
-      prenom: '',
-      nom: '',
-      email: '',
-    },
-    validate,
-    onSubmit: values => {
-      alert(JSON.stringify(values, null, 2));
-    },
-  });
-  return (
-    <form onSubmit={formik.handleSubmit}>
-      <label htmlFor="prenom">Prénom</label>
-      <input className='input_form'
-        id="prenom"
-        name="prenom"
-        type="text"
-        onChange={formik.handleChange}
-        value={formik.values.prenom}
-      />
-      {formik.errors.prenom ? <div className='alert_1'>{formik.errors.prenom}</div> : null}
-
-      <label htmlFor="nom">Nom</label>
-      <input className='input_form'
-        id="nom"
-        name="nom"
-        type="text"
-        onChange={formik.handleChange}
-        value={formik.values.nom}
-      />
-      {formik.errors.nom ? <div className='alert_1'>{formik.errors.nom}</div> : null}
-
-      <label htmlFor="email">Adresse Email </label>
-      <input className='input_form'
-        id="email"
-        name="email"
-        type="email"
-        onChange={formik.handleChange}
-        value={formik.values.email}
-      />
-      {formik.errors.email ? <div className='alert_1'>{formik.errors.email}</div> : null}
-
-      <button type="submit" className='button_submit'>Envoyer</button>
+  return(
+    <>
+    <form>
+      <h1>ENTRER VOS INFORMATIONS</h1>
+      <input className="input" onChange={handleChange} name="nom"    value={input.nom}    type="text" autoComplete="on" placeholder="Entrer votre nom"></input>
+      <input className="input" onChange={handleChange} name="prenom" value={input.prenom} type="text" autoComplete="on" placeholder="Entrer votre prénom"></input>
+      <input className="input" onChange={handleChange} name="email"  value={input.email} type="email" autoComplete="on" placeholder="Entrer votre email"></input>
+      <button className="submit" onClick={handleClick} type="submit" >M'inscrire</button>
     </form>
+    </>
   );
-};
-
-export default Forms;
+}

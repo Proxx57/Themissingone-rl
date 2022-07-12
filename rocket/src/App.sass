@@ -22,7 +22,6 @@ $color-gold: #c98d1d
 *
     margin: 0
     padding: 0
-    outline: 1px solid $color-red
     
 a
     text-decoration: none
@@ -206,6 +205,9 @@ p
 
 .todo__list_text
     font-size: 1.5em
+    color: $color-white
+.todo__list_checkbox
+    margin-right: 1%
 
 //CHECKBOX TODOList
 .checkbox
@@ -249,14 +251,29 @@ p
     font-family: $font-fun
     font-size: 2em
 
-.input_form
+
+
+    
+.input
     height: 3%
     width: 30%
+    padding: 2vh
+    margin: 1vh
     background-color: #20000046
     color: $color-white
     font-family: $font-fun
     font-size: 1.5em
 
+::placeholder
+        color: $color-white
 
+.submit
+    padding: 1vh
+    border-radius: 6px
+    background-color: $color-gold
+    color: $color-white
+    font-family: $font-fun
+    font-size: 3vh
+    margin-top: 3vh
 
 

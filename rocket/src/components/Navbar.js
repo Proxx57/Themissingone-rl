@@ -8,16 +8,9 @@ export default function Navbar() {
 		<header>
 			<nav>
 				<ul className="list">
-					<div className="divider"></div>
 					<li className="items">
 						<Link to="/" className="hover-1">
 							Accueil
-						</Link>
-					</li>
-					<div className="divider"></div>
-					<li className="items">
-						<Link to="/Contact" className="hover-1">
-							Nous contacter
 						</Link>
 					</li>
 				</ul>
